@@ -4,10 +4,6 @@
         <title>二维码下载</title>     
 
         <script type="text/javascript">  
-            /*  
-             * 智能机浏览器版本信息:  
-             *  
-             */  
             var browser = {  
                 versions: function() {  
                     var u = navigator.userAgent, app = navigator.appVersion;  
@@ -44,7 +40,7 @@
             <div id="download" style="border: 1px solid black; display: none;">请点击右上角选择“在浏览器打开”</div>
         </div>
         <div style="margin-top: 700px">
-            <button onClick="download()" style="width: 300px; height: 100px; font-size: 40px; margin: auto; display: block">下载</button>
+            <button id="downloadbtn" onClick="download()" style="width: 300px; height: 100px; font-size: 40px; margin: auto; display: block">下载</button>
         </div>
     </body>
     <script>
@@ -52,6 +48,7 @@
             var ua = navigator.userAgent.toLowerCase();
             if(ua.match(/MicroMessenger/i)=="micromessenger") {
                 document.getElementById('download').style.display = "block";
+                document.getElementById('downloadbtn').style.display = "none";
             } else {
                 document.getElementById('download').style.display = "none";
             }
